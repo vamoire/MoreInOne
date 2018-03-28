@@ -1,3 +1,6 @@
 /Library/
 /Temp/
+/obj/
 *.meta
+*.cache
+.DS_Store

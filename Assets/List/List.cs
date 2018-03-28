@@ -22,7 +22,7 @@ public class List : MonoBehaviour {
 	}
 
 	void LoadData() {
-		int count = 10;//总个数
+		int count = Level.share.levelInfo.Length;//总个数
 
 		RectTransform rt = content.GetComponent<RectTransform>();
 		float dis = width / row;//列间距
@@ -35,6 +35,8 @@ public class List : MonoBehaviour {
 		
 		for (int i = 0; i < count; i++)
 		{
+			//info
+			LevelInfo info = Level.share.levelInfo[i];
 			int x = i % row;
 			int y = i / row;
 			Vector3 point = first + new Vector3(x * dis, -y * dis, 0);
@@ -42,14 +44,14 @@ public class List : MonoBehaviour {
 			RectTransform child = obj.GetComponent<RectTransform>();
 			child.SetParent(rt);
 			child.anchoredPosition3D = point;
-
+			//name
 			Text text = obj.GetComponentInChildren<Text>();
-			text.text = (i + 1).ToString();
-
+			text.text = info.name;
+			//button
 			Button button = obj.GetComponent<Button>();
 			int levelIdx = i;
 			button.onClick.AddListener(()=>{
-				Game.levelIdx = levelIdx;
+				Level.share.currentLevelIdx = levelIdx;
 				SceneManager.LoadScene("Game");
 			});
 		}

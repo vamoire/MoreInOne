@@ -4,12 +4,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Game : MonoBehaviour {
-
-	public static int levelIdx = 0;
-
 	// Use this for initialization
 	void Start () {
-		Debug.Log(levelIdx);
+		SceneManager.LoadScene(Level.share.currentLevelInfo.scene, LoadSceneMode.Additive);
 	}
 	
 	// Update is called once per frame
