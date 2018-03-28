@@ -54,7 +54,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Game\Controller.cs" />
      <Compile Include="Assets\Game\Game.cs" />
+     <Compile Include="Assets\GameFail\GameFail.cs" />
+     <Compile Include="Assets\GameSuccess\GameSuccess.cs" />
      <Compile Include="Assets\Home\Home.cs" />
      <Compile Include="Assets\Level\Level.cs" />
      <Compile Include="Assets\Level\Level1\Level1.cs" />
