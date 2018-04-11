@@ -195,7 +195,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1876062754663080, guid: 181f8b8c696c34051a52782924199b0d, type: 2}
       propertyPath: m_Name
-      value: Pair (1)
+      value: Pair
       objectReference: {fileID: 0}
     - target: {fileID: 4616567340823646, guid: 181f8b8c696c34051a52782924199b0d, type: 2}
       propertyPath: m_LocalPosition.x
