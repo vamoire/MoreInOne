@@ -11,7 +11,7 @@ public class Config {
 	/// <summary>
 	/// 配置文件路径
 	/// </summary>
-	public string fileName = "config.json";
+	string fileName = "config.json";
 	/// <summary>
 	/// 读取配置文件并反序列化
 	/// </summary>
@@ -19,6 +19,7 @@ public class Config {
 	/// <returns>配置文件对象</returns>
 	public static T Read<T>(string fileName) where T : Config, new() {
 		string path = FileHelper.PersistentDataPath(fileName);
+		Debug.Log(path);
 		if (!File.Exists(path)) {
 			path = FileHelper.StreamingAssetsPath(fileName);
 		}

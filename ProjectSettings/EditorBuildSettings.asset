@@ -20,3 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scene/Level/Level2.unity
     guid: 6e32512dc61a643a18640d7d33127a50
+  - enabled: 1
+    path: Assets/Scene/GameSuccess.unity
+    guid: f137eb2f9f78043998db82b9ae7d77cc
+  - enabled: 1
+    path: Assets/Scene/GameFail.unity
+    guid: d53ab2ec0ff7e4bd8bc73bbdaf1c76af

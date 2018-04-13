@@ -54,19 +54,24 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Data\Level.cs" />
      <Compile Include="Assets\Game\Controller.cs" />
      <Compile Include="Assets\Game\Game.cs" />
-     <Compile Include="Assets\Game\Level.cs" />
      <Compile Include="Assets\Game\Pair.cs" />
      <Compile Include="Assets\GameFail\GameFail.cs" />
      <Compile Include="Assets\GameSuccess\GameSuccess.cs" />
      <Compile Include="Assets\Home\Home.cs" />
      <Compile Include="Assets\List\List.cs" />
+     <Compile Include="Assets\MX\Networking\Request.cs" />
      <Compile Include="Assets\Public\AppConfig.cs" />
+     <Compile Include="Assets\Public\BGM.cs" />
      <Compile Include="Assets\Public\ButtonScale.cs" />
      <Compile Include="Assets\Public\Config.cs" />
+     <Compile Include="Assets\Public\CreateFontEditor.cs" />
+     <Compile Include="Assets\Public\DelayAction.cs" />
      <Compile Include="Assets\Public\FileHelper.cs" />
      <Compile Include="Assets\Public\ImagePlus.cs" />
+     <Compile Include="Assets\Public\LanguageData.cs" />
      <Compile Include="Assets\Public\NotificationCenter.cs" />
      <Compile Include="Assets\Public\Sound.cs" />
      <Compile Include="Assets\Public\Tools.cs" />

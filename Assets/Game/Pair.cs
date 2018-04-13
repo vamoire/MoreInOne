@@ -80,6 +80,23 @@ public class Pair : MonoBehaviour {
 		moving = false;
 	}
 
+
+	/// <summary>
+	/// Sent when an incoming collider makes contact with this object's
+	/// collider (2D physics only).
+	/// </summary>
+	/// <param name="other">The Collision2D data associated with this collision.</param>
+	void OnCollisionEnter2D(Collision2D other)
+	{
+		StopMove();
+		if (OnMoveFailed != null) {
+			OnMoveFailed();
+		}
+	}
+
+
+
+
 	[ContextMenu("设置起始点")]
 	void SetBeginEndPoint() {
 		if (line.positionCount < 2) {

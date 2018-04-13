@@ -9,6 +9,8 @@ public class Game : MonoBehaviour {
 
 	Pair[] pairs;
 
+	bool gameRunning = false;
+
 	// Use this for initialization
 	void Start () {
 		LevelInfo levelInfo = Level.share.currentLevelInfo;
@@ -52,17 +54,29 @@ public class Game : MonoBehaviour {
 				GameFail();
 			};
 		}
+
+		gameRunning = true;
 	}
 
 	void GameSuccess() {
+		if (gameRunning == false) {
+			return;
+		}
+		gameRunning = false;
 		Debug.Log("Success");
+		SceneManager.LoadScene("GameSuccess");
 	}
 
 	void GameFail() {
+		if (gameRunning == false) {
+			return;
+		}
+		gameRunning = false;
 		foreach (Pair pair in pairs)
 		{
 			pair.StopMove();
 		}
 		Debug.Log("Fail");
+		SceneManager.LoadScene("GameFail");
 	}
 }
