@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using MX.Json;
 
-public class Level : Config {
+public class Level : JsonConfig {
 
 	static Level __level = null;
 	public static Level share {

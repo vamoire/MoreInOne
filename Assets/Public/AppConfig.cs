@@ -1,12 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Newtonsoft.Json;
+using MX.Json;
 
 /// <summary>
 /// 应用设置信息
 /// </summary>
-public class AppConfig : Config {
+public class AppConfig : JsonConfig {
 
 	public static string BGMChangeNotification = "BGMChangeNotification";
 	public static string SoundChangeNotification = "SoundChangeNotification";
