@@ -9,17 +9,32 @@ namespace MX.Json
 	/// <summary>
 	/// 配置文件
 	/// </summary>
-	public class JsonConfig {
+	public abstract class JsonConfig<T> where T : JsonConfig<T>, new() {
+
+
+		static T __instance = default(T);
+
+		public static T share {
+			get {
+				if (__instance == null) {
+					__instance = new T();
+					__instance = Read(__instance.fileName);
+				}
+				return __instance;
+			}
+		}
+
 		/// <summary>
 		/// 配置文件路径
 		/// </summary>
-		string fileName = "config.json";
+		public string fileName = "config.json";
+		
 		/// <summary>
 		/// 读取配置文件并反序列化
 		/// </summary>
 		/// <param name="fileName">配置文件名称</param>
 		/// <returns>配置文件对象</returns>
-		public static T Read<T>(string fileName) where T : JsonConfig, new() {
+		public static T Read(string fileName) {
 			string path = FileHelper.PersistentDataPath(fileName);
 			Debug.Log(path);
 			if (!File.Exists(path)) {

@@ -3,18 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using MX.Json;
 
-public class Level : JsonConfig {
+public class Level : JsonConfig<Level> {
 
-	static Level __level = null;
-	public static Level share {
-		get {
-			if (__level == null) {
-				__level = Read<Level>("level.json");
-			}
-			return __level;
-		}
+	public Level() {
+		fileName = "level.json";
 	}
-
+	
 	public int currentLevelIdx {
 		get {
 			int idx = AppConfig.share.gameCurrentIdx;

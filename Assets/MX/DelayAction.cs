@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace FFF
+namespace MX
 {
 	public class DelayAction : MonoBehaviour {
 

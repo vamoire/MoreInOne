@@ -63,18 +63,18 @@
      <Compile Include="Assets\Home\Home.cs" />
      <Compile Include="Assets\List\List.cs" />
      <Compile Include="Assets\MX\ButtonPlus.cs" />
+     <Compile Include="Assets\MX\DelayAction.cs" />
      <Compile Include="Assets\MX\FileHelper.cs" />
+     <Compile Include="Assets\MX\ImagePlus.cs" />
+     <Compile Include="Assets\MX\Instance.cs" />
      <Compile Include="Assets\MX\Json\JsonConfig.cs" />
+     <Compile Include="Assets\MX\LanguageManager.cs" />
+     <Compile Include="Assets\MX\MXEditor.cs" />
      <Compile Include="Assets\MX\Networking\Request.cs" />
+     <Compile Include="Assets\MX\NotificationCenter.cs" />
+     <Compile Include="Assets\MX\SoundManager.cs" />
      <Compile Include="Assets\MX\Tools.cs" />
      <Compile Include="Assets\Public\AppConfig.cs" />
-     <Compile Include="Assets\Public\BGM.cs" />
-     <Compile Include="Assets\Public\CreateFontEditor.cs" />
-     <Compile Include="Assets\Public\DelayAction.cs" />
-     <Compile Include="Assets\Public\ImagePlus.cs" />
-     <Compile Include="Assets\Public\LanguageData.cs" />
-     <Compile Include="Assets\Public\NotificationCenter.cs" />
-     <Compile Include="Assets\Public\Sound.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
